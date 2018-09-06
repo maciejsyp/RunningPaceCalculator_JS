@@ -52,15 +52,21 @@ function countPace (timeInSeconds, distance){
 $(".button").click(function(event) {
 		event.preventDefault();
 
+	var message = document.getElementById("message");
+    message.innerHTML = "";	
+
+	try{
 		var distance = chosedOption();
-		console.log(distance);
 		var hours = $("#hours").val();
 		var minutes = $("#minutes").val();
 		var seconds = $("#seconds").val();
-		console.log(hours);
-		console.log(minutes);
-		console.log(seconds);
-		
+
+		if(isNaN(hours) || isNaN(minutes) || isNaN(seconds)){
+			throw error
+		}
+		} catch (error){
+			message.innerHTML = "Wprowadź dane liczbowe";
+		}
 		var p = document.querySelector("p");		
 
 		var timeInSeconds = convertToSeconds(hours, minutes, seconds);
@@ -70,7 +76,9 @@ $(".button").click(function(event) {
 
 		p.innerHTML = "Twoje szacowane tempo to: " + countedPace;		
 
-		$("p").show(700);
+		var reset = document.getElementById("reset");
+		$("p").show(400);
+		$("reset").show(400);
 		
 		}); 
 

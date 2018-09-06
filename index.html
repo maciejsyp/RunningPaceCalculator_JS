@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Kalkulator tempa biegu</title>
 		<link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
 		<script src="jquery.js"></script>
 		<script src="scripts.js"></script>
 	</head>
@@ -19,23 +20,16 @@
                             </select>
                                 <form action="form">
                                     <label for="expectedTime">
-                                        <h2>Wpisz swój przewidywany czas biegu:</h2>
+                                        <h2>Wpisz swój przewidywany czas:</h2>
                                     </label><br>
-                                    <label for="hours">
-                                        <h2>Liczba godzin:</h2>
-                                    </label><br>
-                                    <input type="text" name="hours" id="hours"><br>
-                                    <label for="minutes">
-                                        <h2>Liczba minut:</h2>
-                                    </label><br>
-                                    <input type="text" name="minutes" id="minutes"><br>
-                                    <label for="seconds">
-                                        <h2>Liczba sekund:</h2>
-                                    </label><br>
-                                    <input type="text" name="seconds" id="seconds"><br>
+                                    <input type="text" name="hours" id="hours" placeholder="Liczba godzin"><br>
+                                    <input type="text" name="minutes" id="minutes" placeholder="Liczba minut"><br>
+                                    <input type="text" name="seconds" id="seconds" placeholder="Liczba sekund"><br>
 
                                     <button type="submit" class="button" id="button">Oblicz</button>
-                                    <p>Twoje szacowane tempo to: </p>
+                                    <button type="submit" id="reset">Reset</button>
+                                    <p id="pace">Twoje szacowane tempo to: </p>
+                                    <p id="message"></p>
                                 </form>
 		</div>
 	</body>

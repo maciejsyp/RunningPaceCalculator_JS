@@ -1,8 +1,7 @@
 body {
 	background-image: url("img/backgroundImage.jpg");
 	background-position: left;
-	background-color: #d8be2b;
-	font-family: Verdana, sans-serif;
+	font-family: 'Righteous', sans-serif;
 	letter-spacing: 1.3pt;
 }
 
@@ -19,14 +18,13 @@ body {
 
 h1 {
 	text-align: center;
-	font-size: 24px;
+	font-size: 32px;
 }
 
 #distanceLabel {
-	letter-spacing: 0pt;
-    font-size: 14px;
+	letter-spacing: 1.3pt;
+    font-size: 18px;
     font-weight: 600;
-	text-transform: uppercase;
 	padding-bottom: 3px;
 }
 
@@ -35,19 +33,19 @@ h1 {
 	border-radius: 5px;
 	width: 200px;
 	padding: 10px 0;
-	margin: 15px 0;
+	margin: 15px 0px;
 	font-size: 12px;
 	font-weight: 600;
 	text-align: center;
 }
 
 h2 {
+	font-size: 22px;
 	margin: 0 auto;
 }
 
 form {
     text-align: center;
-    font-size: 14px;
     margin-top: 30px;
 }
 
@@ -60,16 +58,28 @@ form p {
 }
 
 input {
+	font-size: 14px;
 	width: 50%;
 	border-spacing: 2px;
 	border-radius: 5px;
-	padding: 5px;
-	margin-bottom: 12px;
+	padding: 14px;
+	margin: 15px auto;
 }
-
 
 .button {
     background-color: #26241b;
+    color: #EDF5E1;
+	padding: 15px 20px;
+	margin: 16px 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 6px;
+}
+
+#reset {
+	display: none;
+	background-color: #26241b;
     color: #EDF5E1;
 	padding: 15px 20px;
 	margin: 16px 0;
