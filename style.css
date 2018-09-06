@@ -1,0 +1,80 @@
+body {
+	background-image: url("img/backgroundImage.jpg");
+	background-position: left;
+	background-color: #d8be2b;
+	font-family: Verdana, sans-serif;
+	letter-spacing: 1.3pt;
+}
+
+.container {
+	background-color: #dbd7c0;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 5px black solid;
+    border-spacing: 6px;
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 0.94;
+}
+
+h1 {
+	text-align: center;
+	font-size: 24px;
+}
+
+#distanceLabel {
+	letter-spacing: 0pt;
+    font-size: 14px;
+    font-weight: 600;
+	text-transform: uppercase;
+	padding-bottom: 3px;
+}
+
+#distance {
+	border-spacing: 2px;
+	border-radius: 5px;
+	width: 200px;
+	padding: 10px 0;
+	margin: 15px 0;
+	font-size: 12px;
+	font-weight: 600;
+	text-align: center;
+}
+
+h2 {
+	margin: 0 auto;
+}
+
+form {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+
+form p {
+	display: none;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+input {
+	width: 50%;
+	border-spacing: 2px;
+	border-radius: 5px;
+	padding: 5px;
+	margin-bottom: 12px;
+}
+
+
+.button {
+    background-color: #26241b;
+    color: #EDF5E1;
+	padding: 15px 20px;
+	margin: 16px 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 6px;
+}

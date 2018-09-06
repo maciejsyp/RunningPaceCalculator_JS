@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Kalkulator tempa biegu</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="jquery.js"></script>
+		<script src="scripts.js"></script>
+	</head>
+	<body>
+		<div class="container">
+					<h1>Kalkulator tempa biegu</h1>
+                            <label for="distance" id="distanceLabel">Wybierz dystans:</label>
+                            <select id="distance">
+                              <option value="kilometers5">5 kilometrów</option>
+                              <option value="kilometers10">10 kilometrów</option>
+                              <option value="halfMarathon">Półmaraton</option>
+                              <option value="marathon">Maraton</option>
+                            </select>
+                                <form action="form">
+                                    <label for="expectedTime">
+                                        <h2>Wpisz swój przewidywany czas biegu:</h2>
+                                    </label><br>
+                                    <label for="hours">
+                                        <h2>Liczba godzin:</h2>
+                                    </label><br>
+                                    <input type="text" name="hours" id="hours"><br>
+                                    <label for="minutes">
+                                        <h2>Liczba minut:</h2>
+                                    </label><br>
+                                    <input type="text" name="minutes" id="minutes"><br>
+                                    <label for="seconds">
+                                        <h2>Liczba sekund:</h2>
+                                    </label><br>
+                                    <input type="text" name="seconds" id="seconds"><br>
+
+                                    <button type="submit" class="button" id="button">Oblicz</button>
+                                    <p>Twoje szacowane tempo to: </p>
+                                </form>
+		</div>
+	</body>
