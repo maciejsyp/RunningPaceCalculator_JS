@@ -1,7 +1,7 @@
 body {
 	background-image: url("img/backgroundImage.jpg");
 	background-position: left;
-	font-family: 'Righteous', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	letter-spacing: 1.3pt;
 }
 
@@ -21,14 +21,18 @@ h1 {
 	font-size: 32px;
 }
 
-#distanceLabel {
-	letter-spacing: 1.3pt;
-    font-size: 18px;
+#distanceLabel, #choiceLabel {
+	letter-spacing: 0.5pt;
+    font-size: 16px;
     font-weight: 600;
 	padding-bottom: 3px;
 }
+#distanceLabel{
+	margin-right: 99px;
 
-#distance {
+}	
+
+#distance, #choice {
 	border-spacing: 2px;
 	border-radius: 5px;
 	width: 200px;
@@ -43,6 +47,11 @@ h2 {
 	font-size: 22px;
 	margin: 0 auto;
 }
+
+.paceForm{
+	display: none;
+}
+
 
 form {
     text-align: center;
@@ -62,8 +71,8 @@ input {
 	width: 50%;
 	border-spacing: 2px;
 	border-radius: 5px;
-	padding: 14px;
-	margin: 15px auto;
+	padding: 8px;
+	margin: 13px auto;
 }
 
 .button {

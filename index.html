@@ -4,13 +4,18 @@
 		<meta charset="utf-8">
 		<title>Kalkulator tempa biegu</title>
 		<link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
 		<script src="jquery.js"></script>
 		<script src="scripts.js"></script>
 	</head>
 	<body>
 		<div class="container">
 					<h1>Kalkulator tempa biegu</h1>
+                            <label for="choice" id="choiceLabel">Wybierz sposób przeliczania:</label>
+                            <select id="choice">
+                              <option value="timeToPace">Czas na średnie tempo</option>
+                              <option value="paceToTime">Średnie tempo na czas</option>
+                            </select>  
                             <label for="distance" id="distanceLabel">Wybierz dystans:</label>
                             <select id="distance">
                               <option value="kilometers5">5 kilometrów</option>
@@ -18,18 +23,31 @@
                               <option value="halfMarathon">Półmaraton</option>
                               <option value="marathon">Maraton</option>
                             </select>
-                                <form action="form">
+
+                        <div class="forms">    
+                            <div class="timeForm">
+                                <form action="form" id="timeForm">
                                     <label for="expectedTime">
                                         <h2>Wpisz swój przewidywany czas:</h2>
                                     </label><br>
                                     <input type="text" name="hours" id="hours" placeholder="Liczba godzin"><br>
                                     <input type="text" name="minutes" id="minutes" placeholder="Liczba minut"><br>
                                     <input type="text" name="seconds" id="seconds" placeholder="Liczba sekund"><br>
-
                                     <button type="submit" class="button" id="button">Oblicz</button>
-                                    <button type="submit" id="reset">Reset</button>
-                                    <p id="pace">Twoje szacowane tempo to: </p>
-                                    <p id="message"></p>
+                                    <!-- <button type="submit" id="reset">Reset</button> -->
+                                <p id="countedPace">Twoje szacowane tempo to: </p>
+                                <p id="message"></p>
                                 </form>
+                            </div>   
+                            <div class="paceForm"> 
+                                <form action="form" id="paceForm">
+                                    <label for="expectedPace">
+                                        <h2>Wpisz swoje przewidywane tempo:</h2>
+                                    </label><br>
+                                    <input type="text" name="pace" id="pace" placeholder="Twoje szacowane tempo"><br>
+                                    <button type="submit" class="button" id="button">Oblicz</button>
+                                </form>
+                            </div>
+                        </div>                
 		</div>
 	</body>

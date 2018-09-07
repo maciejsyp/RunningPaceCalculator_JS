@@ -8,6 +8,33 @@ const hoursToSeconds = 3600;
 const minutesToSeconds = 60;
 
 
+
+
+	var selectedType = document.getElementById("choice");
+	var parentNode = document.querySelector(".forms");
+	var paceForm = document.querySelector(".paceForm");
+	var timeForm = document.querySelector(".timeForm");
+	console.log(selectedType);
+	console.log(parentNode);
+	console.log(paceForm);
+	console.log(timeForm);
+
+	selectedType.onchange = function(){
+	var choice = selectedType.options[selectedType.selectedIndex].value;
+	if(choice === "paceToTime"){
+		paceForm.style.display = "inline";
+		timeForm.style.display = "none";
+		var changedForm = parentNode.replaceChild(paceForm, timeForm);
+		parentNode.appendChild(changedForm);
+	} else {
+	  paceForm.style.display = "none";
+	  timeForm.style.display = "inline";
+	  changedForm = parentNode.replaceChild(timeForm, paceForm);
+	  parentNode.appendChild(changedForm);
+	}
+}
+
+
 function chosedOption(){
 	var select = document.getElementById("distance");
 	var choice = select.options[select.selectedIndex].value;
@@ -49,12 +76,9 @@ function countPace (timeInSeconds, distance){
             return countedPace;
         }
 
+
 $(".button").click(function(event) {
 		event.preventDefault();
-
-	var message = document.getElementById("message");
-    message.innerHTML = "";	
-
 	try{
 		var distance = chosedOption();
 		var hours = $("#hours").val();
@@ -67,7 +91,7 @@ $(".button").click(function(event) {
 		} catch (error){
 			message.innerHTML = "Wprowadź dane liczbowe";
 		}
-		var p = document.querySelector("p");		
+		var p = document.getElementById("countedPace");		
 
 		var timeInSeconds = convertToSeconds(hours, minutes, seconds);
 		console.log(timeInSeconds);
@@ -75,9 +99,6 @@ $(".button").click(function(event) {
 		console.log(countedPace);
 
 		p.innerHTML = "Twoje szacowane tempo to: " + countedPace;		
-
-		var reset = document.getElementById("reset");
-		$("p").show(400);
 		$("reset").show(400);
 		
 		}); 
@@ -85,3 +106,17 @@ $(".button").click(function(event) {
 });
 
 
+
+
+
+
+
+
+
+	// var message = document.getElementById("message");
+ //    message.innerHTML = "";	
+
+
+
+		// var reset = document.getElementById("reset");
+		// $("p").show(400);
